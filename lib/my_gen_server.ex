@@ -44,7 +44,7 @@ defmodule MyGenServer do
       {pid, query} ->
         {reply, state1} = f.(query, state) # this is important!
         send pid, {name, reply}            #d
-        loop(name, f, state1)              # tail-call to wait on #b again!
+        loop(name, f, state1)              # tail-call to wait on #c again!
     end
   end
 
